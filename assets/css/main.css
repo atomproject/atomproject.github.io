@@ -2798,84 +2798,40 @@
 
 	#header {
 		padding: 9em 0 9em 0 ;
-		color: rgba(85, 85, 85, 0.75);
+		color: #ffffff;
 		overflow: hidden;
 		position: relative;
 		text-align: center;
 	}
+  #header .inner {
+    max-width: 600px;
+    padding: 10px;
+    margin: 0 auto;
+  }
+  #header .button.scrolly {
+    background: #fff;
+    color: #07c5f2 !important;
+    box-shadow: none;
+  }
+  #logo{
+    background: url('../img/logo.png') no-repeat center center;
+    background-size: contain;
+  }
 
-		#header a {
-			border-bottom-color: rgba(85, 85, 85, 0.5);
+  #logo h1{
+    opacity: 0;
+  }
+
+
+		#header a:hover {
+			color: #07c5f2;
+      background: #ffffff;
 		}
-
-			#header a:hover {
-				color: #555;
-			}
-
-		#header h1, #header h2, #header h3, #header h4, #header h5, #header h6, #header strong, #header b {
-			color: #555;
-		}
-
-		#header header p {
-			color: #555;
-		}
-
-		#header header.major:after {
-			background: #555;
-		}
-
-		#header input[type="submit"],
-		#header input[type="reset"],
-		#header input[type="button"],
-		#header button,
-		#header .button {
-			box-shadow: inset 0 0 0 1px #555;
-			color: #555 !important;
-		}
-
-			#header input[type="submit"]:hover,
-			#header input[type="reset"]:hover,
-			#header input[type="button"]:hover,
-			#header button:hover,
-			#header .button:hover {
-				background-color: rgba(85, 85, 85, 0.125);
-			}
-
-			#header input[type="submit"]:active,
-			#header input[type="reset"]:active,
-			#header input[type="button"]:active,
-			#header button:active,
-			#header .button:active {
-				background-color: rgba(85, 85, 85, 0.25);
-			}
-
-			#header input[type="submit"].special,
-			#header input[type="reset"].special,
-			#header input[type="button"].special,
-			#header button.special,
-			#header .button.special {
-				background-color: #555;
-				box-shadow: inset 0 0 0 1px #555 !important;
-				color: #4686a0 !important;
-			}
-
-				#header input[type="submit"].special:hover,
-				#header input[type="reset"].special:hover,
-				#header input[type="button"].special:hover,
-				#header button.special:hover,
-				#header .button.special:hover {
-					background-color: rgba(85, 85, 85, 0.125) !important;
-					color: #555 !important;
-				}
-
-				#header input[type="submit"].special:active,
-				#header input[type="reset"].special:active,
-				#header input[type="button"].special:active,
-				#header button.special:active,
-				#header .button.special:active {
-					background-color: rgba(85, 85, 85, 0.25) !important;
-				}
-
+    .new-section{
+      height: 850px;
+      background: url('../img/TravelNxt.jpg') no-repeat center center;
+      background-size: cover;
+    }
 		#header ul.major-icons li .icon {
 			border-color: #555;
 		}
