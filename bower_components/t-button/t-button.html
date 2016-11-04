@@ -1,0 +1,30 @@
+<html><head><link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../paper-button/paper-button.html">
+<link rel="import" href="../paper-icon-button/paper-icon-button.html">
+
+</head><body><dom-module id="t-button">
+
+  <link rel="import" type="css" href="t-button.css">
+
+  <template>
+
+    <template is="dom-if" if="[[!onlyIcon]]" restamp="">
+      <paper-button raised$="{{raised}}" disabled$="{{disabled}}" noink$="{{noink}}" toggles$="{{toggles}}">
+        <span id="text-button">{{label}}</span>
+        <span id="text-icon" hidden$="{{!hasIcon}}" restamp="true">
+          <iron-icon icon="{{ico}}" src="{{icoSrc}}"></iron-icon>
+        </span>
+      </paper-button>
+    </template>
+
+    <template is="dom-if" if="[[onlyIcon]]" restamp="">
+      <paper-icon-button disabled$="{{disabled}}" icon$="{{ico}}" src$="{{icoSrc}}" raised$="{{raised}}" noink$="{{noink}}" toggles$="{{toggles}}">
+      </paper-icon-button>
+    </template>
+
+  </template>
+
+</dom-module>
+
+<script>Polymer({is:"t-button",properties:{onlyIcon:{type:Boolean,value:!1,reflectToAttribute:!0},icoSrc:{type:String},label:{type:String,value:"",reflectToAttribute:!0},hasIcon:{type:Boolean,value:!1,reflectToAttribute:!0},noink:{type:Boolean,value:!0,reflectToAttribute:!0},toggles:{type:Boolean,reflectToAttribute:!0,value:!1},raised:{type:Boolean,reflectToAttribute:!0,value:!1},disabled:{type:Boolean,reflectToAttribute:!0,value:!1},ico:{type:String,reflectToAttribute:!0,notify:!0,observer:"_checkIcon"},iconLeft:{type:Boolean,reflectToAttribute:!0,value:!1}},_checkIcon:function(e){""==this.ico&&this.removeAttribute("ico"),this.hasIcon=this.hasAttribute("ico")}});</script>
+</body></html>
