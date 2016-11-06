@@ -1,4 +1,7 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="description" content="atom-project - open source web component based builders, tools and componentes for easy progressive web app development">
@@ -8,8 +11,18 @@
 	<meta name="theme-color" content="#07C5F2">
 	<link rel="manifest" href="/manifest.json">
 
+	<script>
+      (function(){
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect != location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
+
 	<script>window.Polymer={lazyRegister:!0},function(){if("registerElement"in document&&"import"in document.createElement("link")&&"content"in document.createElement("template"));else{var e=document.createElement("script");e.src="/bower_components/webcomponentsjs/webcomponents-lite.min.js",document.head.appendChild(e)}}(),"serviceWorker"in navigator&&window.addEventListener("load",function(){navigator.serviceWorker.register("/service-worker.js")});</script>
- 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 	<link rel="import" href="/src/my-app.html">
 
 	<style>
@@ -25,4 +38,6 @@
 
 <body unresolved>
 	<my-app></my-app>
-</body></html>
+</body>
+
+</html>
